@@ -1,6 +1,6 @@
 def ANSIBLE_INVENTORY="~/remotehosts"
 def DIR_NAME="Ethan"
-node {
+pipeline {
     stages {
         stage ("Ping remote host with Ansible Ad-Hoc command")  {
             steps {
