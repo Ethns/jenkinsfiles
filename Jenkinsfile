@@ -1,7 +1,7 @@
 def ANSIBLE_INVENTORY="~/remotehosts"
 def DIR_NAME="Ethan"
 node {
-    stags {
+    stages {
         stage ("Ping remote host with Ansible Ad-Hoc command")  {
             steps {
                 sh "ansible all -i ${ANSIBLE_INVENTORY} -m ping"
