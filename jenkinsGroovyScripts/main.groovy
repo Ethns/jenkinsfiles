@@ -13,5 +13,11 @@ pipeline {
                 sh "ls"
             }
         }
+        stage ("Stage 3") {
+            steps {
+                def child01 = load ("${env.WORKSPACE}/jenkinsGroovyScripts/child01.groovy")
+                child01.getFromChild()
+            }
+        }        
     }
 }
