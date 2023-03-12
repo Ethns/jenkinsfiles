@@ -1,4 +1,3 @@
-[submodule "props"]
-	path = props
+[submodule "properties"]
+	path = properties
 	url = https://github.com/Ethns/springboot.git
-	branch = master
