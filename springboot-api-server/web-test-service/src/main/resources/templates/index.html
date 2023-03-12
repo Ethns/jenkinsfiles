@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>login page</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+          background-color: lightblue; font-color:white
+        }
+</style>
+</head>
+<body>
+<div class="container">
+    <form action="login_in" method="post" class="form-horizontal" role="form" >
+        <div class="form-group">
+            <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Please input your username" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-offset-3 col-sm-2 control-label">Password：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="password" name="password" placeholder="Please input your password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-4">
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/js/jquery-2.2.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

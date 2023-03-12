@@ -1,0 +1,36 @@
+apply plugin:'application'
+//声明spring-boot插件
+apply plugin: "org.springframework.boot"
+//启动项
+mainClassName = "org.es.StartServer"
+
+//service项目所需依赖
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+    //依赖子项目
+    compile project (":web-test-base")
+}
+
+// prod
+tasks.register("bootRunProd") {
+    group = "application"
+    description = "Runs the Spring Boot application with the prod profile"
+    doFirst {
+        tasks.bootRun.configure {
+            systemProperty("spring.profiles.active", "prod")
+        }
+    }
+    finalizedBy("bootRun")
+}
+// dev
+tasks.register("bootRunDev") {
+    group = "application"
+    description = "Runs the Spring Boot application with the dev profile"
+    doFirst {
+        tasks.bootRun.configure {
+            systemProperty("spring.profiles.active", "dev")
+        }
+    }
+    finalizedBy("bootRun")
+}
