@@ -1,0 +1,3 @@
+rootProject.name = 'springboot-api-server'
+include 'web-test-base'
+include 'web-test-service'
